@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="container">
-      <form>
+      <form @submit.prevent="login">
   <div class="form-group">
     <label >Email address</label>
-    <input type="email" class="form-control" v-model="form.email"   placeholder="Enter email">
+    <input type="email" class="form-control" v-model="form.email"  placeholder="Enter email">
   </div>
   <div class="form-group">
     <label >Password</label>
@@ -25,6 +25,11 @@ export default {
         email:'',
         password:''
       }
+    }
+  },
+  methods:{
+    login(){
+      User.login(this.form)
     }
   }
 }

@@ -6,7 +6,9 @@ window.Vue = require('vue');
 import Vue from 'vue';
 import VueRouter from 'vue-router'
 import axios from 'axios'
-
+import User from './Helpers/User'
+window.User = User
+console.log(User.id())
 Vue.use(VueRouter)
 Vue.use(axios)
 
