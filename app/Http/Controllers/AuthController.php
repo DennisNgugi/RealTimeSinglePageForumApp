@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
+
 
 class AuthController extends Controller
 {
@@ -22,7 +25,7 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function register(Request $request){
+    public function register(RegisterRequest $request){
        User::create($request->all());
 
         return$this->login($request);

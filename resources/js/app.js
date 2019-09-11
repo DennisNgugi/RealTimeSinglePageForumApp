@@ -8,7 +8,7 @@ import VueRouter from 'vue-router'
 import axios from 'axios'
 import User from './Helpers/User'
 window.User = User
-console.log(User.id())
+console.log(User.loggedIn())
 Vue.use(VueRouter)
 Vue.use(axios)
 
@@ -19,8 +19,6 @@ import Question from './components/Question.vue'
 import Category from './components/Category.vue'
 
 const routes = [
-
-
 {
 name: 'question',
 path:'/question',
